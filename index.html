@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="script.js"></script>
+</head>
+<style>
+
+body{
+        background-color:rgb(221, 237, 246);
+        color: rgb(14, 14, 79);
+        font-family: cursive;
+}
+    
+
+    .movie-tile {
+    width: 250px;
+    margin: 10px;
+    flex: 0 0 auto;
+    background-color:azure;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.movie-tile img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.movie-tile .content {
+    padding: 10px;
+}
+
+.movie-tile .content h4 {
+    font-size: 1.25rem;
+}
+
+.movie-tile .content p {
+    font-size: 0.8rem;
+}
+
+
+</style>
+<body class="dark:bg-gray-900">
+
+    <nav class="bg-darkblue-900 w-full z-4d top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="https://img.icons8.com/?size=100&id=k11OFWu7cVGv&format=png&color=000000" class="h-8" alt="Logo">
+                <span class="self-center text-5xl font-bold whitespace-nowrap dark:text-white">pEgu</span>
+            </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+            </div>
+            <div class="items-center justify-between w-full md:flex md:w-auto md:order-1">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-[rgb(221,237,246)] md:bg-[rgb(221,237,246)] dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:text-black md:p-0 dark:text-black">Movies</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:text-black md:p-0 dark:text-black">TV Shows</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:text-black md:p-0 dark:text-black">People</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded md:bg-transparent md:text-black md:p-0 dark:text-black">More</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      
+    
+    <!-- Banner -->
+    <section class="bg-cover bg-center py-20 mt-15 text-center" style="background-image: url('https://image.tmdb.org/t/p/w1280////2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg');">
+        <div class="container mx-auto bg-white bg-opacity-75 p-8 rounded-lg shadow-lg">
+            <h1 class="text-4xl font-bold text-gray-900">Welcome to pEgu Movies</h1>
+            <p class="text-lg text-Wg-800 mt-4">Millions of movies, TV shows and people to discover. Explore now.</p>
+            <form class="flex items-center max-w-lg mx-auto mt-4">   
+                <label for="voice-search" class="sr-only">Search</label>
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.15 5.6h.01m3.337 1.913h.01m-6.979 0h.01M5.541 11h.01M15 15h2.706a1.957 1.957 0 0 0 1.883-1.325A9 9 0 1 0 2.043 11.89 9.1 9.1 0 0 0 7.2 19.1a8.62 8.62 0 0 0 3.769.9A2.013 2.013 0 0 0 13 18v-.857A2.034 2.034 0 0 1 15 15Z"/>
+                        </svg>
+                    </div>
+                    <input type="text" id="voice-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for a Movie..." required />
+                    <button type="button" class="absolute inset-y-0 right-0 flex items-center pr-3">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7v3a5.006 5.006 0 0 1-5 5H6a5.006 5.006 0 0 1-5-5V7m7 9v3m-3 0h6M7 1h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3Z"/>
+                        </svg>
+                    </button>
+                </div>
+                <button type="submit" class="inline-flex items-center py-2.5 px-3 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                    <svg class="w-4 h-4 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>Search
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Sections for Movies -->
+    <section id="popular-movies" class="movies-section py-10">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Popular Movies</h2>
+            <div class="movies-container font-bold flex space-x-4 overflow-x-auto">
+                <!-- Movie tiles will be inserted here  -->
+            </div>
+        </div>
+    </section>
+
+    <section id="top-rated-movies" class="movies-section py-10">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Top Rated Movies</h2>
+            <div class="movies-container font-bold flex space-x-4 overflow-x-auto">
+                <!-- Movie tiles will be inserted here  -->
+            </div>
+        </div>
+    </section>
+
+    <section id="upcoming-movies" class="movies-section py-10">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-bold mb-4">Upcoming Movies</h2>
+            <div class="movies-container font-bold flex space-x-4 overflow-x-auto">
+                <!-- Movie tiles will be inserted here  -->
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
